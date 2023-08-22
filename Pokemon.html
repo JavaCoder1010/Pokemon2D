@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Pokemon!</title>
+        <link rel="stylesheet" href="Pokemon.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        <section id="Elegir-Pokemon">
+            <h1>Pokemon!</h1>
+            
+            <h2>Selecciona tu Pokemon:</h2>
+            
+            <div id = "contenedorTarjetas">
+            </div>
+
+           
+            
+
+            <button id="boton-elegirprimerpokemon" class="botonseleccionar">Seleccionar</button>
+        </section>
+        
+        <section id ="ver-mapa">
+            <canvas id ="mapa"></canvas>
+            <button onmouseup= detenermovimiento()  onmousedown = moverPokemonArriba()>Arriba</button>
+            <div id = "botonesDireccionales">
+            <button onmouseup= detenermovimiento() onmousedown = moverPokemonIzquierda()>Izquierda</button> 
+            <button onmouseup= detenermovimiento() onmousedown = moverPokemonDerecha()>Derecha</button>
+            </div>
+            <button onmouseup= detenermovimiento() onmousedown = moverPokemonAbajo()>Abajo</button>
+        </section>
+
+        <section id="Selecciona-tu-ataque">
+            <h1>Pokemon!</h1>
+            <h2>Selecciona un ataque:</h2>
+            
+            <div id = "contenedorAtaques">
+            
+            </div>
+            
+            <div class = "contadores">
+                <div class = "contador-propio">
+                    <p id = "contadorVidas">0</p>
+                    <p id = "elegirpokemon"></p>
+                    <div id = "Vidas"></div>
+                </div>
+                <div class = "contador-enemigo">
+                    <p id = "contadorVidasEnemigo">0</p>
+                    <p id = "elegirPokemonEnemigo"></p>
+                    <div id = "VidasEnemigas"></div>
+                </div>
+            </div>
+        </section>
+
+        <button id="reiniciar">Reiniciar</button>
+
+        <div>
+            <section id="Alertas">
+                <p> <span id = "Alertas"></span></p>
+            </section>
+        </div>
+
+        <script src="JS/Pokemon.js"></script>    
+    </body>
+</html>
